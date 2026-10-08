@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Createpossible Ventures — building useful tools, for good</title>
+<meta name="description" content="Createpossible Ventures — building tools and launching initiatives to generate revenue for Gospel impact." />
+
+<!-- Link preview (Open Graph — Facebook, LinkedIn, iMessage, Slack, etc.) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Createpossible Ventures" />
+<meta property="og:title" content="Building useful tools, for good" />
+<meta property="og:description" content="Tools, investments, and initiatives launched to generate revenue for Gospel impact." />
+<meta property="og:url" content="https://createpossible.ventures/" />
+<meta property="og:image" content="https://createpossible.ventures/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Createpossible Ventures — building useful tools, for good" />
+
+<!-- Link preview (Twitter / X) -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Building useful tools, for good" />
+<meta name="twitter:description" content="Tools, investments, and initiatives launched to generate revenue for Gospel impact." />
+<meta name="twitter:image" content="https://createpossible.ventures/og-image.png" />
+
+<link rel="canonical" href="https://createpossible.ventures/" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+  :root { --ink:#1b1b1b; --muted:#6b6b72; --pink:#c94e6e; --pinkd:#a83a56; --line:#ececec; --alt:#faf7f8; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a { color:var(--pink); text-decoration:none; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+
+  header { position:sticky; top:0; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); z-index:10; }
+  header .wrap { display:flex; align-items:center; height:72px; gap:12px; }
+  .logo { display:flex; align-items:center; gap:10px; }
+  .logo img { height:40px; width:auto; display:block; }
+  .logo .vent { font-size:13px; font-weight:600; color:var(--muted); letter-spacing:0.14em; text-transform:uppercase; border-left:1px solid var(--line); padding-left:11px; }
+  header nav { margin-left:auto; display:flex; gap:24px; font-weight:600; font-size:14px; }
+  header nav a { color:var(--ink); }
+  header nav a:hover { color:var(--pink); }
+
+  .hero { text-align:center; padding:76px 0 48px; }
+  .hero h1 { font-size:52px; font-weight:800; letter-spacing:-0.03em; margin:0 0 16px; line-height:1.1; }
+  .hero .script { font-family:'Caveat',cursive; color:var(--pink); font-weight:700; font-size:1.15em; }
+  .hero p { font-size:20px; color:var(--muted); max-width:600px; margin:0 auto; }
+
+  .eyebrow { text-align:center; font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--pink); margin:0 0 26px; }
+
+  .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; padding:10px 0 44px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden; transition:transform .15s, box-shadow .2s, border-color .2s; display:flex; flex-direction:column; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 16px 36px rgba(27,27,27,0.10); border-color:#e4c4ce; }
+  .shot { width:100%; height:172px; object-fit:cover; object-position:top center; display:block; border-bottom:1px solid var(--line); background:#f2f5fa; }
+  .cardbody { padding:20px 22px; display:flex; flex-direction:column; flex:1; }
+  .card .top { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+  .ic { width:42px; height:42px; border-radius:12px; display:flex; align-items:center; justify-content:center; flex:0 0 42px; background:var(--alt); }
+  .fund { display:inline-block; font-size:11px; font-weight:700; color:#9a7224; background:#faf3e2; border:1px solid #eddcb6; border-radius:20px; padding:3px 10px; margin-bottom:12px; }
+  .card h3 { margin:0; font-size:20px; font-weight:800; letter-spacing:-0.01em; }
+  .role { font-size:12px; color:var(--muted); font-weight:600; margin-top:2px; }
+  .ic svg { display:block; }
+  .pill { font-size:11px; font-weight:800; padding:4px 10px; border-radius:20px; text-transform:uppercase; letter-spacing:0.04em; margin-left:auto; }
+  .live { background:#e7f7ee; color:#187a4c; } .dev { background:#f1eef7; color:#6a5aa8; } .beta { background:#fdf1e3; color:#9a6a10; } .invest { background:#eaf1de; color:#4b5e2d; } .init { background:#f7ecd6; color:#8a6a2a; }
+  .card p { margin:0 0 16px; color:var(--muted); font-size:15px; flex:1; }
+  .card .go { font-weight:700; font-size:14px; color:var(--pink); }
+
+  .band { background:var(--alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .mission { text-align:center; padding:52px 0; }
+  .mission h2 { margin:0 0 12px; font-size:28px; font-weight:800; }
+  .mission p { color:#4a4a52; font-size:17px; max-width:580px; margin:0 auto; }
+  .mission a { font-weight:800; }
+
+  footer { padding:36px 0; text-align:center; color:var(--muted); font-size:14px; }
+  footer img { height:30px; opacity:0.9; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto; }
+
+  .intro { text-align:center; color:var(--muted); font-size:17px; max-width:620px; margin:-12px auto 32px; }
+  .deptlabel { text-align:center; font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink); margin:26px 0 16px; }
+  .team { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .team.dirs { grid-template-columns:repeat(2,1fr); max-width:640px; margin:0 auto; }
+  .tcard { background:#fff; border:1px solid var(--line); border-radius:18px; padding:24px 22px; text-align:center; transition:transform .15s, box-shadow .2s, border-color .2s; }
+  .tcard:hover { transform:translateY(-4px); box-shadow:0 16px 36px rgba(27,27,27,0.10); border-color:#e4c4ce; }
+  .tcard img { width:104px; height:104px; border-radius:22px; object-fit:cover; display:block; margin:0 auto 14px; border:1px solid var(--line); }
+  .tcard h4 { margin:0 0 3px; font-size:20px; font-weight:800; letter-spacing:-0.01em; }
+  .tcard .trole { font-size:12px; font-weight:800; color:var(--pink); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:10px; }
+  .tcard .tquote { font-family:'Caveat',cursive; font-size:22px; color:var(--ink); margin:0 0 8px; }
+  .tcard .tdesc { font-size:14px; color:var(--muted); margin:0; }
+
+  @media (max-width:720px){ .grid{grid-template-columns:1fr;} .team{grid-template-columns:repeat(2,1fr);} .hero h1{font-size:38px;} header nav{display:none;} }
+  @media (max-width:460px){ .team,.team.dirs{grid-template-columns:1fr;} }
+
+  /* AI team SVG avatars (Walt's "The Crew") */
+  .tcard .teamav { width:100%; max-width:168px; height:auto; display:block; margin:0 auto 4px; }
+  @keyframes twinkle { 0%,86%,100%{opacity:.55; transform:scale(.9);} 93%{opacity:1; transform:scale(1.15);} }
+  .spark { transform-box:fill-box; transform-origin:center; animation:twinkle 4.6s ease-in-out infinite; }
+  @media (prefers-reduced-motion:reduce){ .spark{animation:none;} }
+
+  /* AI team — modern cards */
+  .aiteam-intro{ text-align:center; color:var(--muted); font-size:17px; max-width:660px; margin:-12px auto 8px; }
+  .teamlabel{ text-align:center; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); margin:32px 0 18px; }
+  .teamlabel span{ color:var(--muted); font-weight:600; }
+  .pgrid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .pcard{ background:#fff; border:1px solid #e7e7ec; border-radius:18px; padding:16px; display:flex; flex-direction:column; transition:transform .18s, box-shadow .2s, border-color .2s; }
+  .pcard:hover{ transform:translateY(-4px); box-shadow:0 16px 36px rgba(27,27,27,0.10); border-color:#e4c4ce; }
+  .phead{ display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+  .pstatus{ display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:700; letter-spacing:0.08em; color:#1f9d57; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .pdot{ width:7px; height:7px; border-radius:50%; background:#28c76f; animation:ppulse 2.2s infinite; }
+  @keyframes ppulse{ 0%{box-shadow:0 0 0 0 rgba(40,199,111,0.45);} 70%{box-shadow:0 0 0 6px rgba(40,199,111,0);} 100%{box-shadow:0 0 0 0 rgba(40,199,111,0);} }
+  @media (prefers-reduced-motion:reduce){ .pdot{animation:none;} }
+  .ptype{ font-size:10px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; padding:3px 9px; border-radius:20px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+  .ptype.spec{ background:#f1f1f4; color:#5b5b66; }
+  .ptype.dir{ background:#fbe9ee; color:#a83a56; }
+  .pimg{ width:100%; aspect-ratio:1/1; border-radius:14px; overflow:hidden; background:#f2f2f5; border:1px solid #ededf1; margin-bottom:14px; }
+  .pimg img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .pname{ font-size:18px; font-weight:800; letter-spacing:-0.01em; margin:0; }
+  .prole{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; color:var(--pink); margin:3px 0 10px; }
+  .pquote{ font-size:14.5px; font-style:italic; color:#3a3a42; margin:0 0 10px; line-height:1.35; }
+  .pbio{ font-size:13px; color:var(--muted); margin:0 0 14px; flex:1; line-height:1.5; }
+  .pmeta{ border-top:1px solid #eeeef1; padding-top:10px; display:flex; align-items:center; justify-content:space-between; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px; letter-spacing:0.04em; color:#a7a7af; }
+  .pmeta b{ color:#5b5b66; font-weight:600; }
+  @media (max-width:1040px){ .pgrid{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:760px){ .pgrid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:460px){ .pgrid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <div class="logo">
+    <img src="cplogo.png" alt="Createpossible" />
+    <span class="vent">Ventures</span>
+  </div>
+  <nav><a href="#projects">Projects</a><a href="#ai-team">AI team</a><a href="https://createpossible.com">Createpossible.com</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1 style="max-width:940px; margin:0 auto; font-size:44px; text-wrap:balance;">Building Tools, Investing, and Launching Initiatives to generate revenue for <span class="script" style="white-space:nowrap;">Gospel Impact.</span></h1>
+</div></div>
+
+<section id="projects"><div class="wrap">
+  <p class="eyebrow">Our projects</p>
+  <div class="grid">
+
+    <div class="card">
+      <a href="https://baton-server-676b.onrender.com" target="_blank"><img class="shot" src="shot-baton.png" alt="Baton website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#7b6eff;">
+            <svg viewBox="0 0 32 32" width="24" height="24"><g transform="rotate(-28 16 16)"><rect x="9" y="13.5" width="14" height="5" rx="2.5" fill="#fff"/></g><circle cx="10.5" cy="20" r="3" fill="#ff8a6b"/><circle cx="21.5" cy="12" r="3" fill="#3fd6a4"/></svg>
+          </div>
+          <div><h3>Baton</h3><div class="role">Project handoff</div></div>
+          <span class="pill dev">In development</span>
+        </div>
+        <p>Hand off a Claude Code project to a teammate with one simple code — no coding, no Git. Free to use.</p>
+        <a class="go" href="https://baton-server-676b.onrender.com" target="_blank">Visit Baton →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://bibleresearchassistant.com" target="_blank"><img class="shot" src="shot-bra.png" alt="Bible Research Assistant website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#e9eefb;">
+            <svg viewBox="0 0 120 120" width="34" height="34" aria-label="Bible Research Assistant">
+              <defs><linearGradient id="braLg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3461c0"/><stop offset="1" stop-color="#18306b"/></linearGradient></defs>
+              <line x1="74" y1="74" x2="101" y2="101" stroke="url(#braLg)" stroke-width="13" stroke-linecap="round"/>
+              <circle cx="50" cy="50" r="33" fill="#fff" stroke="url(#braLg)" stroke-width="9"/>
+              <path d="M50,42 C44,39 35,39 30,42 L30,60 C35,57 44,57 50,60 Z" fill="url(#braLg)"/>
+              <path d="M50,42 C56,39 65,39 70,42 L70,60 C65,57 56,57 50,60 Z" fill="url(#braLg)"/>
+              <line x1="50" y1="42" x2="50" y2="60" stroke="#fff" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <div><h3>Bible Research Assistant</h3><div class="role">Bible study assistant</div></div>
+          <span class="pill live">Live</span>
+        </div>
+        <p>An AI-powered study companion that helps you research Scripture deeply and prepare with confidence.</p>
+        <a class="go" href="https://bibleresearchassistant.com" target="_blank">Visit site →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://socialmediaone.media/" target="_blank"><img class="shot" src="shot-sm1.png" alt="Social Media One website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#1b3a2d;">
+            <svg viewBox="0 0 32 32" width="24" height="24"><path d="M11 14.5 21 9.5M11 17.5 21 22.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="24" cy="8" r="3.4" fill="#fff"/><circle cx="8" cy="16" r="3.4" fill="#fff"/><circle cx="24" cy="24" r="3.4" fill="#fff"/></svg>
+          </div>
+          <div><h3>Social Media One</h3><div class="role">Social media management</div></div>
+          <span class="pill live">Live</span>
+        </div>
+        <p>Done-for-you social media management for organizations and leaders — content created by a trained team in South Africa.</p>
+        <a class="go" href="https://socialmediaone.media/" target="_blank">Visit site →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://richinfaithstorytelling.org/" target="_blank"><img class="shot" src="shot-rif.png" alt="Rich in Faith Storytelling website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#4a2d6b;">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h20a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H14l-6 5v-5H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/><path d="M16 12.5c-1.2-1.6-3.8-1-3.8 1.1 0 1.6 2.2 3 3.8 4.4 1.6-1.4 3.8-2.8 3.8-4.4 0-2.1-2.6-2.7-3.8-1.1z" fill="#fff" stroke="none"/></svg>
+          </div>
+          <div><h3>Rich in Faith Storytelling</h3><div class="role">Storytelling seminars</div></div>
+          <span class="pill live">Live</span>
+        </div>
+        <span class="fund">Funded by the Lily Foundation</span>
+        <p>Workshops that help people find God in their story, shape it into a narrative, and share it with confidence.</p>
+        <a class="go" href="https://richinfaithstorytelling.org/" target="_blank">Visit site →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shot" style="background:linear-gradient(135deg,#0e1526,#1c2b48); display:flex; align-items:center; justify-content:center;">
+        <svg viewBox="0 0 120 120" width="128" height="128">
+          <g stroke="#5aa9ff" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M64 32 L50 62 L34 86"/><path d="M50 62 L68 76 L62 102"/><path d="M64 40 L88 32 M64 44 L44 52"/>
+          </g>
+          <circle cx="64" cy="22" r="9" fill="none" stroke="#5aa9ff" stroke-width="3.6"/>
+          <circle cx="50" cy="62" r="4.5" fill="#3fd6a4"/><circle cx="88" cy="32" r="4.5" fill="#ffb23e"/>
+          <circle cx="34" cy="86" r="4.5" fill="#3fd6a4"/><circle cx="62" cy="102" r="4.5" fill="#3fd6a4"/><circle cx="68" cy="76" r="4.5" fill="#3fd6a4"/>
+        </svg>
+      </div>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:linear-gradient(135deg,#3b82f6,#22b3d8);">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="7" r="3"/><path d="M19 10 L15 17 L9 22 M15 17 L21 21 L18 27 M19 12 L25 9 M19 13 L13 15"/></svg>
+          </div>
+          <div><h3>AI Sports Performance Analyst</h3><div class="role">Movement analysis</div></div>
+          <span class="pill dev">In development</span>
+        </div>
+        <p>AI maps every joint on your video, measures your angles, and shows you — frame by frame — how to move better.</p>
+        <a class="go" href="#">Coming soon →</a>
+      </div>
+    </div>
+
+    <div class="card" style="border-style:dashed; padding:26px; justify-content:center; align-items:center; text-align:center; color:var(--muted); min-height:220px;">
+      <p style="flex:0; margin:0;">More in the works.<br><span style="font-size:13px;">Something to build together? Let's talk.</span></p>
+    </div>
+
+  </div>
+</div></section>
+
+<section style="padding-top:0;"><div class="wrap">
+  <p class="eyebrow">Initiatives we've launched</p>
+  <div class="grid">
+
+    <div class="card">
+      <a href="https://gospelventuresstudio.ai/" target="_blank"><img class="shot" src="shot-gvs.png" alt="Gospel Ventures Lab website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:linear-gradient(135deg,#1e3a6e,#2f5299);">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="12" r="4"/><path d="M9 24c0-4 3-6 7-6s7 2 7 6"/><path d="M16 2 l1 2.6 2.6 1 -2.6 1 -1 2.6 -1 -2.6 -2.6 -1 2.6 -1z" fill="#f5c542" stroke="none"/></svg>
+          </div>
+          <div><h3>Gospel Ventures Studio</h3><div class="role">AI fellowship and venture studio</div></div>
+          <span class="pill dev">In development</span>
+        </div>
+        <p>A Gospel centered AI fellowship and venture studio, equipping Christian leaders to build useful technology ventures for Kingdom impact.</p>
+        <a class="go" href="https://gospelventuresstudio.ai/" target="_blank">Visit site →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://familyoffaith.center/" target="_blank"><img class="shot" src="shot-fof.png" alt="Family of Faith website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#b0895a;">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="22" cy="13" r="3.2"/><path d="M5 26c0-4 3.5-6.5 7-6.5s7 2.5 7 6.5"/><path d="M20.5 20c3 0 6 1.8 6 6"/></svg>
+          </div>
+          <div><h3>Family of Faith</h3><div class="role">Spiritual care community</div></div>
+          <span class="pill init">Initiative</span>
+        </div>
+        <p>An online spiritual community offering chaplain-trained care partners and daily fellowship for those facing a terminal diagnosis — and their caregivers.</p>
+        <a class="go" href="https://familyoffaith.center/" target="_blank">Visit site →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shot" style="background:linear-gradient(135deg,#c9a876,#a9824f); display:flex; align-items:center; justify-content:center;">
+        <svg viewBox="0 0 32 40" width="48" height="60" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M16 4v30M8 13h16"/></svg>
+      </div>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#8a6a3f;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M16 5v22M9 13h14"/></svg>
+          </div>
+          <div><h3>Family of Faith Church Service</h3><div class="role">Monthly virtual worship</div></div>
+          <span class="pill init">Initiative</span>
+        </div>
+        <p>A live, Christ-centered online worship service each month for those who are physically unable to get to church or are facing an end-of-life diagnosis — the whole family gathered, wherever they are.</p>
+        <a class="go" href="https://familyoffaith.center/" target="_blank">Join a service →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shot" style="background:linear-gradient(135deg,#efe7d6,#c9b083); display:flex; align-items:center; justify-content:center;">
+        <svg viewBox="0 0 64 64" width="60" height="60" fill="none" stroke="#6b5533" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 18 C26 14 16 14 12 16 V46 C16 44 26 44 32 48"/>
+          <path d="M32 18 C38 14 48 14 52 16 V46 C48 44 38 44 32 48"/>
+          <path d="M32 18 V48"/>
+        </svg>
+      </div>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#6b5533;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 9 C13 7 8 7 6 8 V24 C8 23 13 23 16 25"/><path d="M16 9 C19 7 24 7 26 8 V24 C24 23 19 23 16 25"/></svg>
+          </div>
+          <div><h3>Pursuit of God Weekly Devotional</h3><div class="role">52-week email series</div></div>
+          <span class="pill dev">In development</span>
+        </div>
+        <p>A 52-week guided journey through A.W. Tozer's <em>Pursuit of God</em> — read an excerpt, then listen, read, or watch a 2-minute devotion from a ministry or marketplace leader. Delivered to your inbox each week.</p>
+        <a class="go" href="#">Coming soon →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="shot" style="background:linear-gradient(135deg,#1e63c4,#163f79); display:flex; align-items:center; justify-content:center;">
+        <svg viewBox="0 0 64 64" width="58" height="58" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 12 h20 l10 10 v30 h-30 z"/>
+          <path d="M36 12 v10 h10"/>
+          <path d="M22 30 h16 M22 38 h16 M22 46 h10"/>
+          <path d="M50 14 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6z" fill="#f5c542" stroke="none"/>
+        </svg>
+      </div>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#1e63c4;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5 h9 l5 5 v17 h-14 z"/><path d="M12 15 h8 M12 20 h8 M12 10 h3"/></svg>
+          </div>
+          <div><h3>Ministry Donor Platform</h3><div class="role">AI donor reports</div></div>
+          <span class="pill dev">In development</span>
+        </div>
+        <p>Fill a simple worksheet — AI turns it into a warm, financially clear donor report. Built for small ministries, with local-currency and USD, voice-to-text, and one-click PDF.</p>
+        <a class="go" href="#">Coming soon →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="shot" src="shot-graphicbible.png" alt="Graphic Bible — Createpossible Studios five signature animation styles" loading="lazy" style="object-fit:contain; background:#0f1523; height:190px;">
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#8a5a2f;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M16 9 C13 7 8 7 6 8 V24 C8 23 13 23 16 25"/><path d="M16 9 C19 7 24 7 26 8 V24 C24 23 19 23 16 25"/></svg>
+          </div>
+          <div><h3>Graphic Bible</h3><div class="role">Old Testament &amp; New Testament</div></div>
+          <span class="pill dev">In development</span>
+        </div>
+        <p>An illustrated Bible from Createpossible Studios — the whole story of Scripture, Old and New Testament, told across five signature animation styles with beauty, clarity, and wonder.</p>
+        <a class="go" href="#">Coming soon →</a>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<section style="padding-top:0;"><div class="wrap">
+  <p class="eyebrow">What we're investing in</p>
+  <div class="grid">
+
+    <div class="card">
+      <a href="https://clnk.sg/" target="_blank"><img class="shot" src="shot-clnk.png" alt="CLNK website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#5b7130;">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 19a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M19 13a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>
+          </div>
+          <div><h3>CLNK</h3><div class="role">Networking platform</div></div>
+          <span class="pill invest">Investment</span>
+        </div>
+        <p>A digital networking platform — a link-in-bio profile, meeting scheduling, email signatures, and NFC business cards, all in one app.</p>
+        <a class="go" href="https://clnk.sg/" target="_blank">Visit CLNK →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://www.guac.sg/" target="_blank"><img class="shot" src="shot-guac.png" alt="GUAC website preview" loading="lazy" style="height:210px; object-position:center bottom;"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#4e8a2f;">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="20" rx="3"/><path d="M5 13h22M11 4v5M21 4v5"/><path d="M11 19l3 3 6-6"/></svg>
+          </div>
+          <div><h3>GUAC</h3><div class="role">Workforce management</div></div>
+          <span class="pill invest">Investment</span>
+        </div>
+        <p>Workforce management software — shift scheduling, payroll, and leave management for small and growing businesses.</p>
+        <a class="go" href="https://www.guac.sg/" target="_blank">Visit GUAC →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://biliroo.com/" target="_blank"><img class="shot" src="shot-biliroo.png" alt="Biliroo website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#2456a8;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="6"/><path d="M16 3v3M16 26v3M3 16h3M26 16h3M7 7l2 2M23 23l2 2M25 7l-2 2M9 23l-2 2"/></svg>
+          </div>
+          <div><h3>Biliroo</h3><div class="role">Newborn jaundice care</div></div>
+          <span class="pill invest">Investment</span>
+        </div>
+        <p>A low cost, non electric device that treats newborn jaundice. A wearable sling filters sunlight so gentle healing light reaches the baby while harmful rays are blocked, made for families and clinics without reliable electricity.</p>
+        <a class="go" href="https://biliroo.com/" target="_blank">Visit Biliroo →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://morlivly.com/product/tualang-honey/" target="_blank"><img class="shot" src="shot-tualang.png" alt="Tualang Honey by Morlivly website preview" loading="lazy"></a>
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#b9791a;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"><path d="M16 4 l10 6 v12 l-10 6 -10 -6 v-12 z"/></svg>
+          </div>
+          <div><h3>Tualang Honey</h3><div class="role">Wild honey from Malaysia</div></div>
+          <span class="pill invest">Investment</span>
+        </div>
+        <p>Pure wild Tualang honey from the Malaysian rainforest, harvested by Orang Asli honey hunters from towering Tualang trees. Every jar is sustainably gathered and supports these indigenous communities and their way of life.</p>
+        <a class="go" href="https://morlivly.com/product/tualang-honey/" target="_blank">Visit Morlivly →</a>
+      </div>
+    </div>
+
+    <div class="card" style="border-style:dashed; padding:26px; justify-content:center; align-items:center; text-align:center; color:var(--muted); min-height:220px;">
+      <p style="flex:0; margin:0;">More investments to come.</p>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="ai-team" style="padding-top:0;"><div class="wrap">
+  <p class="eyebrow">Our AI team</p>
+  <p class="aiteam-intro">Thirteen AI teammates, built and led by Tommy Lee, across three teams. Specialists take one sharp job and start fresh every time. Directors lead an area and keep the context.</p>
+
+  <p class="teamlabel">Build Team <span>· Tools and code</span></p>
+  <div class="pgrid">
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/kate.jpg" alt="Kate, Prompt Specialist" loading="lazy"></div>
+        <h4 class="pname">Kate</h4>
+        <div class="prole">Prompt Specialist</div>
+        <p class="pquote">&ldquo;Say it again, but better.&rdquo;</p>
+        <p class="pbio">Makes every word land right. Refines tone, precision, and contextual resonance.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/tim.jpg" alt="Tim, Debugger" loading="lazy"></div>
+        <h4 class="pname">Tim</h4>
+        <div class="prole">Debugger</div>
+        <p class="pquote">&ldquo;The stack trace never lies.&rdquo;</p>
+        <p class="pbio">Finds out why, not just what. Isolates regressions and error paths.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/joe.jpg" alt="Joe, Code Reviewer" loading="lazy"></div>
+        <h4 class="pname">Joe</h4>
+        <div class="prole">Code Reviewer</div>
+        <p class="pquote">&ldquo;I saw that.&rdquo;</p>
+        <p class="pbio">Reviews everything before it ships. Audits syntax, security, and edge cases.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+  </div>
+
+  <p class="teamlabel">Ministry Team <span>· Scripture and formation</span></p>
+  <div class="pgrid">
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/wayne.jpg" alt="Wayne, Bible & Theology" loading="lazy"></div>
+        <h4 class="pname">Wayne</h4>
+        <div class="prole">Bible & Theology</div>
+        <p class="pquote">&ldquo;Rooted deeply in Scripture and systematic theology.&rdquo;</p>
+        <p class="pbio">Ensures biblical fidelity, exegetical precision, and systematic theological coherence.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/tk.jpg" alt="TK, Pastor & Pulpit" loading="lazy"></div>
+        <h4 class="pname">TK</h4>
+        <div class="prole">Pastor & Pulpit</div>
+        <p class="pquote">&ldquo;Truth with grace, clarity, and resonance.&rdquo;</p>
+        <p class="pbio">Refines homiletics, preaching structure, Gospel centered apologetics, and pulpit delivery.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/andy.jpg" alt="Andy, Mission & Application" loading="lazy"></div>
+        <h4 class="pname">Andy</h4>
+        <div class="prole">Mission & Application</div>
+        <p class="pquote">&ldquo;From insight to real engagement.&rdquo;</p>
+        <p class="pbio">Translates vision and doctrine into mission, cultural execution, and real world impact.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/pete.jpg" alt="Pete, Inner Life & Formation" loading="lazy"></div>
+        <h4 class="pname">Pete</h4>
+        <div class="prole">Inner Life & Formation</div>
+        <p class="pquote">&ldquo;Form the heart before you direct the hands.&rdquo;</p>
+        <p class="pbio">Guides contemplative disciplines, emotional health, spiritual formation, and pastoral care.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/ken.jpg" alt="Ken, Historical Context" loading="lazy"></div>
+        <h4 class="pname">Ken</h4>
+        <div class="prole">Historical Context</div>
+        <p class="pquote">&ldquo;Understanding the past unlocks the present.&rdquo;</p>
+        <p class="pbio">Contextualizes texts, historical epochs, cultural backgrounds, and movements.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+  </div>
+
+  <p class="teamlabel">Creative Team <span>· Writing, design, and delivery</span></p>
+  <div class="pgrid">
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype dir">Director</span>
+        </div>
+        <div class="pimg"><img src="team/walt.jpg" alt="Walt, Design Director" loading="lazy"></div>
+        <h4 class="pname">Walt</h4>
+        <div class="prole">Design Director</div>
+        <p class="pquote">&ldquo;Make them feel it.&rdquo;</p>
+        <p class="pbio">Reviews design for warmth, story, and craft, so every piece has soul.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Cross-domain memory</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype dir">Director</span>
+        </div>
+        <div class="pimg"><img src="team/warner.jpg" alt="Warner, Brand Director" loading="lazy"></div>
+        <h4 class="pname">Warner</h4>
+        <div class="prole">Brand Director</div>
+        <p class="pquote">&ldquo;If it is not bold, it is not done.&rdquo;</p>
+        <p class="pbio">Pushes design and branding to be bold, immersive, unforgettable, and coherent.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Cross-domain memory</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/sam.jpg" alt="Sam, Writer" loading="lazy"></div>
+        <h4 class="pname">Sam</h4>
+        <div class="prole">Writer</div>
+        <p class="pquote">&ldquo;Your voice, on paper.&rdquo;</p>
+        <p class="pbio">Crafts narrative, editorial content, and articles with authentic tone and voice.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/kimberly.jpg" alt="Kimberly, Fact Checker" loading="lazy"></div>
+        <h4 class="pname">Kimberly</h4>
+        <div class="prole">Fact Checker</div>
+        <p class="pquote">&ldquo;Two sources or it did not happen.&rdquo;</p>
+        <p class="pbio">Checks every factual claim, citation, and statistic, enforcing two sources minimum.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+      <div class="pcard">
+        <div class="phead">
+          <span class="pstatus"><span class="pdot"></span>ACTIVE</span>
+          <span class="ptype spec">Specialist</span>
+        </div>
+        <div class="pimg"><img src="team/roosevelt.jpg" alt="Roosevelt, Handoff Packager" loading="lazy"></div>
+        <h4 class="pname">Roosevelt</h4>
+        <div class="prole">Handoff Packager</div>
+        <p class="pquote">&ldquo;Nothing leaves my desk half packed.&rdquo;</p>
+        <p class="pbio">Packages deliverables so anyone can pick them up and run immediately.</p>
+        <div class="pmeta"><span>SCOPE</span><b>Fresh session per task</b></div>
+      </div>
+  </div>
+</div></section>
+
+<div class="band"><div class="mission"><div class="wrap">
+  <h2>Why we build ❤</h2>
+  <p>Our tools are made to be genuinely useful — and to give back. These projects are all designed to support the mission of <strong>Resource Global</strong>, developing Christian leaders in cities around the world.</p>
+</div></div></div>
+
+<footer><div class="wrap">
+  <img src="cplogo.png" alt="Createpossible" />
+  <strong>Createpossible Ventures</strong> · a Tommy Lee project · <a href="https://createpossible.com">createpossible.com</a>
+</div></footer>
+
+</body>
+</html>

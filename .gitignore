@@ -1,0 +1,9 @@
+# Local deliverables, not part of the website
+*.pptx
+
+# Editable source stays local; old unused clipart avatars (replaced by team/)
+ai-*.png
+
+# OS / tooling
+.DS_Store
+.claude/

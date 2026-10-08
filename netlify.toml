@@ -1,0 +1,27 @@
+# Netlify settings for the Createpossible Ventures site.
+# This is a plain static site (no build step). Everything sits at the root.
+
+[build]
+  publish = "."
+  command = ""
+
+# Send anything that does not match a real file to index.html.
+# Real files like /og.html are served first, so this only catches unknown paths.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Basic security headers.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Let the browser cache images for a year (they rarely change).
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
