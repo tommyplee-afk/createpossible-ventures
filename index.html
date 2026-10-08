@@ -118,6 +118,10 @@
   .pbio{ font-size:13px; color:var(--muted); margin:0 0 14px; flex:1; line-height:1.5; }
   .pmeta{ border-top:1px solid #eeeef1; padding-top:10px; display:flex; align-items:center; justify-content:space-between; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px; letter-spacing:0.04em; color:#a7a7af; }
   .pmeta b{ color:#5b5b66; font-weight:600; }
+  /* AI developed podcasts */
+  .podcover{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; border-bottom:1px solid var(--line); background:#f2f2f5; }
+  .pill.pod{ background:#ede9f7; color:#5a4a9a; }
+
   @media (max-width:1040px){ .pgrid{ grid-template-columns:repeat(3,1fr); } }
   @media (max-width:760px){ .pgrid{ grid-template-columns:repeat(2,1fr); } }
   @media (max-width:460px){ .pgrid{ grid-template-columns:1fr; } }
@@ -344,6 +348,42 @@
 
     <div class="card" style="border-style:dashed; padding:26px; justify-content:center; align-items:center; text-align:center; color:var(--muted); min-height:220px;">
       <p style="flex:0; margin:0;">More investments to come.</p>
+    </div>
+
+  </div>
+</div></section>
+
+<section style="padding-top:0;"><div class="wrap">
+  <p class="eyebrow">AI developed podcasts</p>
+  <p class="aiteam-intro">Full shows, written and produced with AI.</p>
+  <div class="grid">
+
+    <div class="card">
+      <img class="podcover" src="pod/resolute-desk.webp" alt="The Resolute Desk podcast cover" loading="lazy">
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#1b3a6b;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="4" width="8" height="15" rx="4"/><path d="M8 15 a8 8 0 0 0 16 0"/><path d="M16 23 v4 M12 27 h8"/></svg>
+          </div>
+          <div><h3>The Resolute Desk</h3><div class="role">Lives of the US Presidents</div></div>
+          <span class="pill pod">Podcast</span>
+        </div>
+        <p>The people, decisions, and turning points behind the desk. A story driven look at the lives of the US Presidents.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="podcover" src="pod/capes-cowls-lassos.jpg" alt="Capes, Cowls, and Lassos podcast cover" loading="lazy">
+      <div class="cardbody">
+        <div class="top">
+          <div class="ic" style="background:#16233f;">
+            <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="4" width="8" height="15" rx="4"/><path d="M8 15 a8 8 0 0 0 16 0"/><path d="M16 23 v4 M12 27 h8"/></svg>
+          </div>
+          <div><h3>Capes, Cowls, and Lassos</h3><div class="role">The world of superheroes</div></div>
+          <span class="pill pod">Podcast</span>
+        </div>
+        <p>A fun ride through the world of superheroes, their origins and myths and the stories behind the capes, cowls, and lassos.</p>
+      </div>
     </div>
 
   </div>
