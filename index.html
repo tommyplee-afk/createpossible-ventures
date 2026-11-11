@@ -187,6 +187,8 @@
   .grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
   .mini{ background:var(--paper); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform .18s ease, box-shadow .2s ease; }
   .mini:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(16,21,43,0.10); }
+  a.mini{ color:inherit; text-decoration:none; }
+  a.mini .wlink{ margin-top:auto; }
   .mini .thumb{ width:100%; aspect-ratio:16/10; object-fit:cover; display:block; background:#eceae4; }
   .mini .thumb.contain{ object-fit:contain; background:#0f1523; }
   .mini .ph{ width:100%; aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; }
@@ -375,8 +377,8 @@
   </div>
 </section>
 
-<!-- 2. Selected work -->
-<section id="ventures" aria-label="Selected work">
+<!-- 2. AI Projects -->
+<section id="ventures" aria-label="AI Projects">
   <div class="wrap">
     <div class="cat">
       <span class="cattag c-build reveal"><span class="dot"></span>AI Projects</span>
@@ -384,47 +386,33 @@
       <p class="catsub reveal">AI tools, media, and ventures we design, build, and run in-house, from live products to projects in development.</p>
     </div>
 
-    <article class="work reveal">
-      <div class="wmedia">
-        <a href="https://bibleresearchassistant.com" target="_blank" rel="noopener"><img src="shot-bra.png" alt="Bible Research Assistant website" loading="lazy" decoding="async"></a>
-      </div>
-      <div class="wtext">
-        <div class="bar"></div>
-        <span class="eyebrow"><span class="n">01</span>Venture</span>
-        <h3>Bible Research Assistant</h3>
-        <p>An AI-powered tool for deeper, more faithful study of Scripture, grounded in the text rather than guesswork.</p>
-        <a class="wlink" href="https://bibleresearchassistant.com" target="_blank" rel="noopener">Explore the project <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <article class="work rev reveal">
-      <div class="wmedia">
-        <a href="https://socialmediaone.media/" target="_blank" rel="noopener"><img src="shot-cpm.png" alt="Createpossible Media website" loading="lazy" decoding="async"></a>
-      </div>
-      <div class="wtext">
-        <div class="bar"></div>
-        <span class="eyebrow"><span class="n">02</span>Commercial studio</span>
-        <h3>Createpossible Media</h3>
-        <p>A creative studio producing strategic content, design, and media for businesses and mission, built by a trained team in Johannesburg.</p>
-        <a class="wlink" href="https://socialmediaone.media/" target="_blank" rel="noopener">Work with the studio <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <article class="work reveal">
-      <div class="wmedia">
-        <img src="shot-graphicbible.png" alt="Graphic Bible — Createpossible Studios animation styles" loading="lazy" decoding="async" style="background:#0f1523; object-fit:contain; aspect-ratio:16/11;">
-      </div>
-      <div class="wtext">
-        <div class="bar"></div>
-        <span class="eyebrow"><span class="n">03</span>Venture · In development</span>
-        <h3>Graphic Bible</h3>
-        <p>A visually rich, accessible retelling of Scripture for a new generation, told across five signature animation styles.</p>
-        <span class="wlink soon">In development</span>
-      </div>
-    </article>
-
-    <p class="instub reveal">Also in development</p>
     <div class="grid3">
+      <a class="mini reveal" href="https://bibleresearchassistant.com" target="_blank" rel="noopener">
+        <img class="thumb" src="shot-bra.png" alt="Bible Research Assistant website" loading="lazy" decoding="async">
+        <div class="mb">
+          <h4>Bible Research Assistant</h4>
+          <div class="mrole">Live · AI study tool</div>
+          <p>An AI tool for deeper, more faithful study of Scripture, grounded in the text rather than guesswork.</p>
+          <span class="wlink">Visit site →</span>
+        </div>
+      </a>
+      <a class="mini reveal" href="https://socialmediaone.media/" target="_blank" rel="noopener">
+        <img class="thumb" src="shot-cpm.png" alt="Createpossible Media website" loading="lazy" decoding="async">
+        <div class="mb">
+          <h4>Createpossible Media</h4>
+          <div class="mrole">Live · Commercial studio</div>
+          <p>A creative studio producing content, design, and AI video for businesses and mission, built by our team in Johannesburg.</p>
+          <span class="wlink">Visit site →</span>
+        </div>
+      </a>
+      <div class="mini reveal">
+        <img class="thumb contain" src="shot-graphicbible.png" alt="Graphic Bible animation styles" loading="lazy" decoding="async">
+        <div class="mb">
+          <h4>Graphic Bible</h4>
+          <div class="mrole">Venture · In development</div>
+          <p>A visually rich, accessible retelling of Scripture across five signature animation styles.</p>
+        </div>
+      </div>
       <div class="mini reveal">
         <div class="ph" style="background:linear-gradient(135deg,#1f2b47,#3a5a86);">
           <svg viewBox="0 0 120 120" width="80" height="80" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -448,7 +436,13 @@
         </div>
       </div>
       <div class="mini reveal">
-        <img class="thumb contain" src="shot-graphicbible.png" alt="Createpossible Studios animation styles" loading="lazy" decoding="async">
+        <div class="ph" style="background:linear-gradient(135deg,#6b4a1f,#b9791a);">
+          <svg viewBox="0 0 120 120" width="76" height="76" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="24" y="34" width="72" height="52" rx="8"/>
+            <path d="M24 48 H96 M40 34 V48 M60 34 V48 M80 34 V48 M40 86 V72 M60 86 V72 M80 86 V72"/>
+            <path d="M54 58 L70 66 L54 74 Z" fill="#fff" stroke="none"/>
+          </svg>
+        </div>
         <div class="mb">
           <h4>Createpossible Studios</h4>
           <div class="mrole">Original animation &amp; media</div>
