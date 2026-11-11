@@ -84,7 +84,7 @@
   .btn-white:hover{ transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,0.18); }
   .arrow{ font-size:1.05em; line-height:1; }
 
-  section{ padding:92px 0; }
+  section{ padding:60px 0; }
   .bar{ width:44px; height:4px; background:var(--accent); border-radius:2px; }
   .eyebrow{ font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--accentd); }
   .eyebrow .n{ color:var(--ink); opacity:0.32; margin-right:8px; }
@@ -159,7 +159,15 @@
   /* Secondary */
   .more{ background:var(--white); border-top:1px solid var(--line); }
   .subeyebrow{ font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--accentd); margin:0 0 12px; }
-  .subtitle{ font-size:clamp(24px,3.4vw,36px); font-weight:800; letter-spacing:-0.025em; margin:0 0 40px; }
+  .subtitle{ font-size:clamp(24px,3.4vw,36px); font-weight:800; letter-spacing:-0.025em; margin:0 0 28px; }
+  /* A lone card (Client work) sits wide, picture left and words right, so there's no empty space beside it */
+  .grid3.solo{ grid-template-columns:1fr; }
+  .mini.wide{ flex-direction:row; }
+  .mini.wide > a{ flex:0 0 46%; display:block; }
+  .mini.wide .thumb{ object-position:top; }
+  .mini.wide .thumb{ height:100%; aspect-ratio:auto; min-height:260px; }
+  .mini.wide .mb{ padding:30px 34px; justify-content:center; }
+  .mini.wide p{ flex:0; }
 
   .grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
   .mini{ background:var(--paper); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform .18s ease, box-shadow .2s ease; }
@@ -252,7 +260,7 @@
     .agents{ grid-template-columns:repeat(3,1fr); }
   }
   @media (max-width:860px){
-    section{ padding:64px 0; }
+    section{ padding:44px 0; }
     .wrap{ padding:0 22px; }
     .hero .hgrid{ grid-template-columns:1fr; gap:48px; }
     .hvis{ min-height:0; margin-top:8px; }
@@ -261,6 +269,9 @@
     .work.rev .wmedia{ order:0; }
     .purpose .body, .steps{ margin-left:0; }
     .grid3{ grid-template-columns:1fr; }
+    .mini.wide{ flex-direction:column; }
+    .mini.wide .thumb{ aspect-ratio:16/10; min-height:0; }
+    .mini.wide .mb{ padding:20px 22px; }
     .invgrid{ grid-template-columns:1fr; }
     .pods{ grid-template-columns:1fr; }
     .stats .wrap{ grid-template-columns:repeat(2,1fr); }
@@ -503,8 +514,8 @@
   <div class="wrap">
     <p class="subeyebrow reveal">Client work</p>
     <h2 class="subtitle reveal">Projects we deliver for others.</h2>
-    <div class="grid3">
-      <div class="mini reveal">
+    <div class="grid3 solo">
+      <div class="mini wide reveal">
         <a href="https://www.richinfaith.org/" target="_blank" rel="noopener"><img class="thumb" src="shot-rif.png" alt="Rich in Faith website" loading="lazy" decoding="async"></a>
         <div class="mb">
           <h4>Rich in Faith</h4>
