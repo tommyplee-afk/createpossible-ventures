@@ -103,6 +103,12 @@
   .hvis .shot-main{ position:relative; z-index:1; width:88%; margin-left:auto; display:block; border-radius:8px; background:#fff; box-shadow:0 26px 60px rgba(16,21,43,0.18); border:1px solid rgba(16,21,43,0.06); }
   .hvis .shot-float{ position:absolute; z-index:2; left:-6px; bottom:-30px; width:50%; display:block; border-radius:8px; background:#fff; box-shadow:0 20px 48px rgba(16,21,43,0.20); border:1px solid rgba(16,21,43,0.06); }
 
+  /* Mission statement band */
+  .promise{ background:var(--accentlt); border-top:1px solid #d3deff; border-bottom:1px solid #d3deff; text-align:center; padding:64px 0; }
+  .promise .bar{ margin:0 auto 24px; }
+  .promise p{ font-size:clamp(21px,2.9vw,32px); font-weight:800; letter-spacing:-0.02em; line-height:1.28; color:var(--ink); max-width:900px; margin:0 auto; }
+  .promise strong{ color:var(--accentd); }
+
   /* Stats strip */
   .stats{ background:var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
   .stats .wrap{ display:grid; grid-template-columns:repeat(4,1fr); }
@@ -322,6 +328,14 @@
         <img class="shot-float" src="shot-cpm.png" alt="" loading="eager" decoding="async">
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Mission statement -->
+<section class="promise" aria-label="Our mission">
+  <div class="wrap">
+    <div class="bar reveal"></div>
+    <p class="reveal">Createpossible Ventures exists to launch revenue-generating projects that fund the mission of <strong>Resource Global</strong> and <strong>Gospel Impact</strong> around the world.</p>
   </div>
 </section>
 
@@ -584,7 +598,7 @@
 <aside class="mission" id="about" aria-label="About">
   <div class="wrap">
     <h2>Why we build.</h2>
-    <p>Createpossible Ventures exists to launch revenue-generating projects that fund the mission of <strong>Resource Global</strong>, developing Christian leaders in cities around the world. Useful business, for good.</p>
+    <p>Everything we build supports <strong>Resource Global</strong>, developing the next generation of Christian leaders in cities around the world. Useful business, for good.</p>
   </div>
 </aside>
 
