@@ -157,9 +157,24 @@
   .studiointro .ctas{ margin-top:30px; }
 
   /* Secondary */
-  .more{ background:var(--white); border-top:1px solid var(--line); }
+  .more{ background:transparent; }
+  .bg-ivory{ background:var(--paper); }
+  .bg-white{ background:var(--white); }
+  .more > section{ border-top:1px solid var(--line); }
   .subeyebrow{ font-size:12px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:var(--accentd); margin:0 0 12px; }
   .subtitle{ font-size:clamp(24px,3.4vw,36px); font-weight:800; letter-spacing:-0.025em; margin:0 0 28px; }
+
+  /* Category header — makes each content type distinct */
+  .cat{ margin-bottom:48px; }
+  .cattag{ display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:#fff; padding:8px 15px; border-radius:999px; margin-bottom:18px; }
+  .cattag .dot{ width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.85); }
+  .cattag.c-build{ background:var(--accent); }
+  .cattag.c-invest{ background:#2f8a4e; }
+  .cattag.c-client{ background:#6a4ab0; }
+  .cattag.c-media{ background:#b9791a; }
+  .cat h2{ font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.03em; line-height:1.04; margin:0 0 10px; max-width:18ch; }
+  .cat p.catsub{ font-size:17px; color:var(--muted); margin:0; max-width:56ch; }
+  .instub{ font-size:13px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin:56px 0 22px; padding-top:22px; border-top:1px solid var(--line); }
   /* A lone card (Client work) sits wide, picture left and words right, so there's no empty space beside it */
   .grid3.solo{ grid-template-columns:1fr; }
   .mini.wide{ flex-direction:row; }
@@ -363,10 +378,10 @@
 <!-- 2. Selected work -->
 <section id="ventures" aria-label="Selected work">
   <div class="wrap">
-    <div class="sechead">
-      <div class="bar reveal"></div>
-      <h2 class="reveal">Selected work.</h2>
-      <p class="reveal">Ventures we design, build, and run in-house, from AI research tools to original media.</p>
+    <div class="cat">
+      <span class="cattag c-build reveal"><span class="dot"></span>AI Projects</span>
+      <h2 class="reveal">Products we are building and have built.</h2>
+      <p class="catsub reveal">AI tools, media, and ventures we design, build, and run in-house, from live products to projects in development.</p>
     </div>
 
     <article class="work reveal">
@@ -407,46 +422,8 @@
         <span class="wlink soon">In development</span>
       </div>
     </article>
-  </div>
-</section>
 
-<!-- 3. Our purpose -->
-<section class="purpose" id="impact" aria-label="Our purpose">
-  <div class="wrap">
-    <div class="statement reveal">
-      <span class="slash">/</span>
-      <h2>Build ventures. Create opportunity. Multiply impact.</h2>
-    </div>
-    <p class="body reveal">We build useful businesses that stand on their own commercially, create meaningful work for talented people around the world, and direct the proceeds to <strong>Resource Global</strong>, developing Christian leaders in global cities. Real business, real opportunity, lasting Gospel impact.</p>
-    <div class="steps">
-      <div class="step reveal"><div class="sn">01</div><h4>Build</h4><p>Design and ship useful AI products, media, and services.</p></div>
-      <div class="step reveal"><div class="sn">02</div><h4>Employ</h4><p>Develop and hire talented teams across emerging regions.</p></div>
-      <div class="step reveal"><div class="sn">03</div><h4>Generate</h4><p>Turn ventures and investments into sustainable revenue.</p></div>
-      <div class="step reveal"><div class="sn">04</div><h4>Multiply</h4><p>Direct proceeds to Resource Global and Gospel impact.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. The studio -->
-<section class="studiointro" id="studio" aria-label="The studio">
-  <div class="wrap">
-    <div class="bar reveal"></div>
-    <h2 class="reveal">Human creativity. AI-enabled execution. Global collaboration.</h2>
-    <p class="reveal">A small studio that builds and delivers at a global scale. Talented people on the ground across four regions, working alongside a team of AI subagents that research, write, design, and review the work.</p>
-    <div class="ctas reveal">
-      <a class="btn btn-ghost" href="#studio-detail">Meet the studio <span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== Secondary content (preserved) ===================== -->
-<div class="more">
-
-<!-- More ventures -->
-<section aria-label="More ventures">
-  <div class="wrap">
-    <p class="subeyebrow reveal">More from the studio</p>
-    <h2 class="subtitle reveal">Also building.</h2>
+    <p class="instub reveal">Also in development</p>
     <div class="grid3">
       <div class="mini reveal">
         <div class="ph" style="background:linear-gradient(135deg,#1f2b47,#3a5a86);">
@@ -482,12 +459,46 @@
   </div>
 </section>
 
-<!-- Investments -->
-<section id="invest" aria-label="Investments">
+<!-- 3. Our purpose -->
+<section class="purpose" id="impact" aria-label="Our purpose">
   <div class="wrap">
-    <p class="subeyebrow reveal">Investments</p>
-    <h2 class="subtitle reveal">Founders and companies we back.</h2>
-    <p class="clarify reveal">These are companies we invest in, not ventures we built. We support these founders with capital and partnership; the products are their own.</p>
+    <div class="statement reveal">
+      <span class="slash">/</span>
+      <h2>Build ventures. Create opportunity. Multiply impact.</h2>
+    </div>
+    <p class="body reveal">We build useful businesses that stand on their own commercially, create meaningful work for talented people around the world, and direct the proceeds to <strong>Resource Global</strong>, developing Christian leaders in global cities. Real business, real opportunity, lasting Gospel impact.</p>
+    <div class="steps">
+      <div class="step reveal"><div class="sn">01</div><h4>Build</h4><p>Design and ship useful AI products, media, and services.</p></div>
+      <div class="step reveal"><div class="sn">02</div><h4>Employ</h4><p>Develop and hire talented teams across emerging regions.</p></div>
+      <div class="step reveal"><div class="sn">03</div><h4>Generate</h4><p>Turn ventures and investments into sustainable revenue.</p></div>
+      <div class="step reveal"><div class="sn">04</div><h4>Multiply</h4><p>Direct proceeds to Resource Global and Gospel impact.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. The studio -->
+<section class="studiointro" id="studio" aria-label="The studio">
+  <div class="wrap">
+    <div class="bar reveal"></div>
+    <h2 class="reveal">Human creativity. AI-enabled execution. Global collaboration.</h2>
+    <p class="reveal">A small studio that builds and delivers at a global scale. Talented people on the ground across four regions, working alongside a team of AI subagents that research, write, design, and review the work.</p>
+    <div class="ctas reveal">
+      <a class="btn btn-ghost" href="#studio-detail">Meet the studio <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Secondary content (preserved) ===================== -->
+<div class="more">
+
+<!-- Investments -->
+<section id="invest" class="bg-white" aria-label="Investments">
+  <div class="wrap">
+    <div class="cat">
+      <span class="cattag c-invest reveal"><span class="dot"></span>Investments</span>
+      <h2 class="reveal">Founders and companies we back.</h2>
+      <p class="catsub reveal">Companies we invest in, not ventures we built. We back these founders with capital and partnership; the products are their own.</p>
+    </div>
     <div class="invgrid">
       <div class="inv reveal">
         <a href="https://clnk.sg/" target="_blank" rel="noopener"><img class="ishot" src="shot-clnk.png" alt="CLNK" loading="lazy" decoding="async"></a>
@@ -510,10 +521,13 @@
 </section>
 
 <!-- Client work -->
-<section aria-label="Client work">
+<section class="bg-ivory" aria-label="Client work">
   <div class="wrap">
-    <p class="subeyebrow reveal">Client work</p>
-    <h2 class="subtitle reveal">Projects we deliver for others.</h2>
+    <div class="cat">
+      <span class="cattag c-client reveal"><span class="dot"></span>Client work</span>
+      <h2 class="reveal">Projects we deliver for others.</h2>
+      <p class="catsub reveal">Work we design and produce for partner organizations.</p>
+    </div>
     <div class="grid3 solo">
       <div class="mini wide reveal">
         <a href="https://www.richinfaith.org/" target="_blank" rel="noopener"><img class="thumb" src="shot-rif.png" alt="Rich in Faith website" loading="lazy" decoding="async"></a>
@@ -530,10 +544,13 @@
 </section>
 
 <!-- Experimental media -->
-<section aria-label="Experimental media">
+<section class="bg-white" aria-label="Media">
   <div class="wrap">
-    <p class="subeyebrow reveal">Experimental media</p>
-    <h2 class="subtitle reveal">AI-developed podcasts.</h2>
+    <div class="cat">
+      <span class="cattag c-media reveal"><span class="dot"></span>Media</span>
+      <h2 class="reveal">AI-developed podcasts.</h2>
+      <p class="catsub reveal">Full shows, written and produced with AI. An experiment in building passive income through AI-native media.</p>
+    </div>
     <div class="pods">
       <div class="pod reveal">
         <img src="pod/resolute-desk.webp" alt="The Resolute Desk podcast cover" loading="lazy" decoding="async">
@@ -548,7 +565,7 @@
 </section>
 
 <!-- Studio detail: regions + AI team -->
-<section id="studio-detail" aria-label="The studio in detail">
+<section id="studio-detail" class="bg-ivory" aria-label="The studio in detail">
   <div class="wrap">
     <p class="subeyebrow reveal">Global studio</p>
     <h2 class="subtitle reveal">Teams on the ground, around the world.</h2>
